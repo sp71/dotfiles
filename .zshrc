@@ -7,6 +7,7 @@ alias gd='git diff'
 alias gdca='git diff --cached'
 alias gdm="git diff main"
 alias gds='git diff --staged'
+alias gl='git pull'
 alias glg='git log --stat'
 alias gpf='git push -f'
 alias grb='git rebase'
