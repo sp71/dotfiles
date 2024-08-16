@@ -2,6 +2,7 @@ alias gaa="git add ."
 alias gb="git branch"
 alias gca!='git commit --verbose --all --amend'
 alias gcam='git commit --all --message'
+alias gco='git checkout'
 alias gd='git diff'
 alias gdca='git diff --cached'
 alias gdm="git diff main"
