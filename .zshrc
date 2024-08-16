@@ -21,4 +21,6 @@ alias gum="git checkout main; git pull; git checkout -; git rebase main"
 alias grs='git restore'
 export GIT_EDITOR=vim
 
-alias updateBazel="sed -i.bak 's/fail_if_repin_required = True/fail_if_repin_required = False/' WORKSPACE.bazel && bazel run @unpinned_maven//:pin && sed -i.bak 's/fail_if_repin_required = False/fail_if_repin_required = True/' WORKSPACE.bazel"
+alias updateBazel="REPIN=1 bazel run @unpinned_maven//:pin"
+alias invalidateCache="rm -rf /home/coder/.cache/JetBrains.backup; mv /home/coder/.cache/JetBrains /home/coder/.cache/JetBrains.backup"
+alias updateIntelliJ="vim $(find ~/.cache/JetBrains -name idea64.vmoptions)"
