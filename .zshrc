@@ -24,3 +24,4 @@ export GIT_EDITOR=vim
 alias updateBazel="REPIN=1 bazel run @unpinned_maven//:pin"
 alias invalidateCache="rm -rf /home/coder/.cache/JetBrains.backup; mv /home/coder/.cache/JetBrains /home/coder/.cache/JetBrains.backup"
 alias updateIntelliJ="vim $(find ~/.cache/JetBrains -name idea64.vmoptions)"
+PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
