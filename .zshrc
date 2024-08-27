@@ -9,6 +9,7 @@ alias gdm="git diff main"
 alias gds='git diff --staged'
 alias gl='git pull'
 alias glg='git log --stat'
+alias gp='git push'
 alias gpf='git push -f'
 alias grb='git rebase'
 alias grba='git rebase --abort'
@@ -19,10 +20,14 @@ alias gst="git status"
 alias gss="git status -s"
 alias gum="git checkout main; git pull; git checkout -; git rebase main"
 alias grs='git restore'
+alias prv='gh pr view -w'
 export GIT_EDITOR=vim
 
 alias updateBazel="REPIN=1 bazel run @unpinned_maven//:pin"
-alias services="cd /home/coder/lwcode/services"
 alias invalidateCache="rm -rf /home/coder/.cache/JetBrains.backup; mv /home/coder/.cache/JetBrains /home/coder/.cache/JetBrains.backup"
 alias updateIntelliJ="vim $(find ~/.cache/JetBrains -name idea64.vmoptions)"
+
+alias services="cd /home/coder/lwcode/services"
+alias sgm="cd /home/coder/lwcode/sgm"
+
 PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
