@@ -26,6 +26,7 @@ export GIT_EDITOR=vim
 alias updateBazel="REPIN=1 bazel run @unpinned_maven//:pin"
 alias invalidateCache="rm -rf /home/coder/.cache/JetBrains.backup; mv /home/coder/.cache/JetBrains /home/coder/.cache/JetBrains.backup"
 alias updateIntelliJ="vim $(find ~/.cache/JetBrains -name idea64.vmoptions)"
+alias docknuke='docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker volume prune -f && docker network prune -f && docker rmi -f $(docker images -aq) && docker system prune -af --volumes'
 
 alias services="cd /home/coder/lwcode/services"
 alias sgm="cd /home/coder/lwcode/sgm"
