@@ -1,3 +1,4 @@
+alias ga='git add'
 alias gaa="git add ."
 alias gb="git branch"
 alias gbm='git branch --move'
@@ -24,6 +25,8 @@ alias gum="git checkout main; git pull; git checkout -; git rebase main"
 alias grs='git restore'
 alias prv='gh pr view -w'
 export GIT_EDITOR=vim
+git config --global push.default simple
+git config --global push.autosetupremote true
 
 alias updateBazel="REPIN=1 bazel run @unpinned_maven//:pin"
 alias invalidateCache="rm -rf /home/coder/.cache/JetBrains.backup; mv /home/coder/.cache/JetBrains /home/coder/.cache/JetBrains.backup"
