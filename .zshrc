@@ -1,7 +1,9 @@
 alias gaa="git add ."
 alias gb="git branch"
+alias gbm='git branch --move'
 alias gca!='git commit --verbose --all --amend'
 alias gcam='git commit --all --message'
+alias gcb='git checkout -b'
 alias gco='git checkout'
 alias gd='git diff'
 alias gdca='git diff --cached'
@@ -30,5 +32,9 @@ alias docknuke='docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && do
 
 alias services="cd /home/coder/lwcode/services"
 alias sgm="cd /home/coder/lwcode/sgm"
+alias watchQueryService="services; watchexec --watch lql-builders -w query -w query-builder-core --restart tools/run-query-service"
+alias watchIris="services; watchexec --watch iris --restart tools/run-iris"
 
 PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
+
+brew install watchexec
