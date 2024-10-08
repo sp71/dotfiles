@@ -31,6 +31,7 @@ alias updateIntelliJ="vim $(find ~/.cache/JetBrains -name idea64.vmoptions)"
 alias docknuke='docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker volume prune -f && docker network prune -f && docker rmi -f $(docker images -aq) && docker system prune -af --volumes'
 
 alias services="cd /home/coder/lwcode/services"
+alias rainbow="cd /home/coder/lwcode/rainbow"
 alias sgm="cd /home/coder/lwcode/sgm"
 alias watchQueryService="services; watchexec --watch lql-builders -w query -w query-builder-core --restart tools/run-query-service"
 alias watchIris="services; watchexec --watch iris --restart tools/run-iris"
