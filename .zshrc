@@ -36,6 +36,8 @@ alias docknuke='docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && do
 alias services="cd /home/coder/lwcode/services"
 alias rainbow="cd /home/coder/lwcode/rainbow"
 alias sgm="cd /home/coder/lwcode/sgm"
+
+alias runPreflight="./tools/preflight -p devtest-admin"
 alias watchQueryService="services; watchexec --watch lql-builders -w query -w query-builder-core --restart tools/run-query-service"
 alias watchIris="services; watchexec --watch iris --restart tools/run-iris"
 
