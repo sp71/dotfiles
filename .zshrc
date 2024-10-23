@@ -29,6 +29,7 @@ export GIT_EDITOR=vim
 git config --global push.default simple
 git config --global push.autosetupremote true
 git config --global core.pager less
+git config --global pager.branch false
 
 alias updateBazel="REPIN=1 bazel run @unpinned_maven//:pin"
 alias invalidateCache="rm -rf /home/coder/.cache/JetBrains.backup; mv /home/coder/.cache/JetBrains /home/coder/.cache/JetBrains.backup"
