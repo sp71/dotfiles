@@ -44,7 +44,7 @@ alias runPreflight="./tools/preflight -p devtest-admin"
 alias watchQueryService="services; watchexec --watch lql-builders -w query -w query-builder-core --restart tools/run-query-service"
 alias watchIris="services; watchexec --watch iris --restart tools/run-iris"
 
-export AWS_PROFILE=devtest-admin
+export AWS_PROFILE=devtest-def-eng
 
 PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
 
