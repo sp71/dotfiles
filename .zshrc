@@ -31,6 +31,14 @@ git config --global push.autosetupremote true
 git config --global core.pager less
 git config --global pager.branch false
 
+function signIn() {
+    echo "dockerCoderToken in local terminal and then paste here\n"
+    aws sso login
+    docker login -u satinderlace
+    gh auth login -p https -h github.com -w
+    tsh login --proxy=teleport.ops.lacework.engineering --auth okta
+}
+
 alias updateBazel="REPIN=1 bazel run @unpinned_maven//:pin"
 alias invalidateCache="rm -rf /home/coder/.cache/JetBrains.backup; mv /home/coder/.cache/JetBrains /home/coder/.cache/JetBrains.backup"
 alias updateIntelliJ="vim $(find ~/.cache/JetBrains -name idea64.vmoptions)"
