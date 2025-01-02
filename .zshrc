@@ -51,6 +51,7 @@ alias sgm="cd /home/coder/lwcode/sgm"
 alias runPreflight="./tools/preflight -p devtest-admin"
 alias watchQueryService="services; watchexec --watch lql-builders -w query -w query-builder-core --restart tools/run-query-service"
 alias watchIris="services; watchexec --watch iris --restart tools/run-iris"
+alias createCards="bazel run --test_env=TEST_OUTPUT_DIR="/home/coder/lwcode/services/query/src/test/check_cards/" //query/src/test/check_cards:sql-smoke-test  -- --matcher CIEM"
 
 export AWS_PROFILE=devtest-def-eng
 
