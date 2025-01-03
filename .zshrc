@@ -37,6 +37,7 @@ function signIn() {
     docker login -u satinderlace
     gh auth login -p https -h github.com -w
     tsh login --proxy=teleport.ops.lacework.engineering --auth okta
+    brew install watchexec
 }
 
 alias updateBazel="REPIN=1 bazel run @unpinned_maven//:pin"
@@ -48,7 +49,7 @@ alias services="cd /home/coder/lwcode/services"
 alias rainbow="cd /home/coder/lwcode/rainbow"
 alias sgm="cd /home/coder/lwcode/sgm"
 
-alias runPreflight="./tools/preflight -p devtest-admin"
+alias runPreflight="services; ./tools/preflight -p devtest-admin"
 alias watchQueryService="services; watchexec --watch lql-builders -w query -w query-builder-core --restart tools/run-query-service"
 alias watchIris="services; watchexec --watch iris --restart tools/run-iris"
 alias createCards="bazel run --test_env=TEST_OUTPUT_DIR="/home/coder/lwcode/services/query/src/test/check_cards/" //query/src/test/check_cards:sql-smoke-test  -- --matcher CIEM"
