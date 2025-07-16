@@ -57,5 +57,3 @@ alias createCards="bazel run --test_env=TEST_OUTPUT_DIR="/home/coder/lwcode/serv
 export AWS_PROFILE=devtest-def-eng
 
 PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
-
-brew install watchexec
