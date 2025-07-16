@@ -33,11 +33,18 @@ git config --global pager.branch false
 
 function signIn() {
     echo "dockerCoderToken in local terminal and then paste here\n"
+    aws sso login
     docker login -u satinderlace
     gh auth login -p https -h github.com -w
     tsh login --proxy=teleport.ops.lacework.engineering --auth okta
-    aws sso login
     brew install watchexec
+    cd /home/coder/lwcode
+    if [[ ! -d "./sgm" ]]; then
+      gh repo clone lacework-dev/sgm
+    fi
+    if [[ ! -d "./services" ]]; then
+      gh repo clone lacework/services
+    fi
 }
 
 alias updateBazel="REPIN=1 bazel run @unpinned_maven//:pin"
