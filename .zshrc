@@ -41,6 +41,11 @@ function signIn() {
     cd /home/coder/lwcode
     if [[ ! -d "./sgm" ]]; then
       gh repo clone lacework-dev/sgm
+      cd sgm
+      touch .env
+      code -a .env
+      cd ..
+      echo "-----NOTE SGM-----ADD .env"
     fi
     if [[ ! -d "./services" ]]; then
       gh repo clone lacework/services
