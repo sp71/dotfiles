@@ -33,10 +33,10 @@ git config --global pager.branch false
 
 function signIn() {
     echo "dockerCoderToken in local terminal and then paste here\n"
-    aws sso login
     docker login -u satinderlace
     gh auth login -p https -h github.com -w
     tsh login --proxy=teleport.ops.lacework.engineering --auth okta
+    aws sso login
     brew install watchexec
 }
 
